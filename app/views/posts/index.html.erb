@@ -1,0 +1,10 @@
+<html>
+<body>
+   <%=link_to "Sign out", destroy_user_session_path, method: :delete %><br/><br/>
+    <strong>To Add A new Post </strong> <%=link_to "Click me", new_post_path %><br/><br/><br/>
+	<% @posts.each do |post| %>
+	  <%=image_tag post.image.url(:small)%><br/>
+	  <%=link_to post.title, post %><br/><br/>
+	<% end %>
+</body>
+</html>

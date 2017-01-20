@@ -1,0 +1,7 @@
+<%=form_for ([ @post, @post.comments.build]) do |f| %> 
+
+	<%=f.label :Reply_to_threed %><br/> 
+	<%=f.text_area :content, :size => '30x10' %><br/><br/> 
+	<%=f.submit %><br/> 
+
+<% end %>	
